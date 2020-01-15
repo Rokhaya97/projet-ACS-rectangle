@@ -1,0 +1,50 @@
+body{
+    padding: 0 20%;
+}
+
+section{
+    margin-bottom: 70px;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(230, 39, 204, 0.664);
+    color: white
+}
+/* ____________________ EXERCICE 1 ____________________*/
+#exercice1
+{
+    height: 150px;
+    width: 100%;
+}
+
+
+/* ____________________ EXERCICE 2 ____________________ */
+#exercice2
+{background-color: rgba(241, 12, 100, 0.541);
+    height: 580px;
+    width: 100%;
+}
+
+#zoneBouton
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+
+}
+button {
+    background-color: blue;
+    color:white;
+    padding:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/*#zoneRectangle{
+   padding-left: 350px; 
+}*/

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercices 1 et 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style12.css"/>
+    
+</head>
+<body>
+<section id="exercice1">
+
+    <h2>Exercice 1</h2>
+
+    <p id="texte">Access Code School</p>    
+
+</section>
+
+<section id="exercice2">
+    <h2>Exercice 2</h2>
+
+    <div id="zoneBouton">
+        <button id="boutonHauteur">Bouton 1</button>
+        <button id="boutonVert">Bouton 2</button>
+        <button id="boutonResetCouleur">Bouton 3</button>
+        <button id="boutonDisparait">Bouton 4</button>
+        <button id="boutonReapparait">Bouton 5</button>
+    </div>
+
+    <div id="zoneRectangle">
+        <div id="rectangledep"></div>
+    </div>
+</section>
+
+<script type="text/javascript">
+/*______________EXERCICE 1______________ */
+var texte = document.getElementById("texte");
+texte.style.fontSize = "20px";
+texte.addEventListener("click", agrandirTexte);
+function agrandirTexte(){
+    if(texte.style.fontSize == "20px"){
+        texte.style.fontSize = "70px";
+    }
+    else{
+        texte.style.fontSize = "20px";
+    }
+}
+
+/*______________EXERCICE 2______________ */
+
+var bouton1 = document.getElementById("boutonHauteur");
+var bouton2 = document.getElementById("boutonVert");
+var bouton3 = document.getElementById("boutonResetCouleur");
+var bouton4 = document.getElementById("boutonDisparait");
+var bouton5 = document.getElementById("boutonReapparait");
+
+var rectangle = document.getElementById("rectangledep");
+rectangle.style.backgroundColor = "blue";
+rectangle.style.height = "100px";
+rectangle.style.width = "100px";
+
+
+/* BOUTON 1 */
+bouton1.addEventListener("click", augmenteHauteur);
+
+function augmenteHauteur(){
+    if(rectangle.style.height < "300px"){
+        rectangle.style.height = parseInt(rectangle.style.height) + 10 + "px";
+    }
+    else{
+    rectangle.style.height = "100px";
+    }
+}   
+
+/* BOUTON 2 */
+bouton2.addEventListener("click", couleurVert);
+
+function couleurVert(){
+    rectangle.style.backgroundColor = "green";
+}
+
+/* BOUTON 3 */
+bouton3.addEventListener("click", couleurBleu);
+function couleurBleu(){
+    rectangle.style.backgroundColor = "blue";
+}
+
+/* BOUTON 4 */
+bouton4.addEventListener("click", disparait);
+function disparait(){
+    rectangle.style.display = "none";
+}
+
+/* BOUTON 5 */
+bouton5.addEventListener("click", apparait);
+function apparait(){
+    rectangle.style.display = "block";
+}
+//____________________________exercice 3 ______________________
+rectangle.style.position = "relative";
+rectangle.style.left = "370px";
+rectangle.style.top = "50px";
+
+document.addEventListener("keydown", toucheEnfoncer);
+document.addEventListener("keyup", toucheRelacher);
+
+function toucheEnfoncer(event){
+ if(event.key == "ArrowUp"){
+        rectangle.style.top = "-150px";
+    }
+  
+}
+function toucheRelacher(event){
+
+    if(event.key == "ArrowUp"){
+        rectangle.style.top = "0px";
+    }
+   
+}
+</script>
+</body>
+</html>
